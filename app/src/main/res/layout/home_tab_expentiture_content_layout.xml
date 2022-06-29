@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/app_main_color"
+    android:padding="5dp"
+    android:layout_height="match_parent">
+    <ListView
+        android:dividerHeight="1dp"
+        android:divider="@color/app_secondary_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/expenditure_list_view"/>
+</FrameLayout>

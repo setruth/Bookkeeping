@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="分类"
+            android:textColor="@color/app_main_color"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="10dp"
+            android:background="#CACACA" />
+
+
+            <LinearLayout
+                android:id="@+id/classification_content_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                app:boxBackgroundColor="@color/white"
+                android:layout_weight="1"
+
+                android:id="@+id/userInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入新分类(不能重复)">
+
+                <EditText
+                    android:id="@+id/new_classification_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+
+                android:layout_weight="1"
+                android:id="@+id/add_new_classification_btn"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="添加分类"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.mxn.soul.flowingdrawer_core.FlowingDrawer
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:edPosition="1"
+    app:edMenuSize="200dp"
+    app:edMenuBackground="@color/app_main_color">
+    <!--content-->
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/fragment_layout"/>
+
+                    <com.google.android.material.bottomappbar.BottomAppBar
+                        android:id="@+id/bottom_app_bar"
+                        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        app:navigationContentDescription="首页"
+                        app:fabAlignmentMode="center"
+                        app:menu="@menu/bottom_navigation_menu"
+                        app:fabCradleMargin="5dp"
+                        app:backgroundTint="@color/app_secondary_color"
+                        app:elevation="20dp"
+                        app:hideOnScroll="true" >
+                        <TextView
+                            android:id="@+id/t"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/app_main_color"
+                            android:textSize="20sp"
+                            android:text="@string/app_name"/>
+                    </com.google.android.material.bottomappbar.BottomAppBar>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        app:tint="@color/app_secondary_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/add_bill"
+                        android:elevation="10dp"
+                        android:src="@drawable/add_icon"
+                        app:backgroundTint="@color/app_main_color"
+                        app:layout_anchor="@+id/bottom_app_bar"
+                        app:layout_anchorGravity="center_horizontal" />
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+    <!--menu-->
+    <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/id_container_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/left_menu_layout"/>
+            </LinearLayout>
+        </FrameLayout>
+
+    </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>
+
+
